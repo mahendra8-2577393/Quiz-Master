@@ -1,38 +1,21 @@
+body {
+  margin: 0;
+  padding: 0; /* Optionally reset padding as well */
+  box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+}
 .App {
-  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  min-height: 100vh; /* Full height for background color */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.light-mode{
+  background-color: #ffffff; /* Light background */
+  color: #000000; /* Light text color */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dark-mode{
+  background-color: black; /* Dark background */
+  color: #ffffff; /* Dark text color */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

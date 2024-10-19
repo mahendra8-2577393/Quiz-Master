@@ -1,0 +1,120 @@
+/* Home.css */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 60%;
+  left: 20%;
+  margin: 120px auto;
+ /* Full height minus navbar height */
+  text-align: center; /* Center text */
+  padding: 20px; /* Add some padding */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h1 {
+  font-size: 2.5rem;
+  width: 50%; /* Font size for heading */
+  margin-bottom: 20px; /* Space below the heading */
+  color: #00796b; /* Dark teal color */
+  font-weight: bold; /* Bold font */
+}
+
+p {
+  font-size: 1.4rem;
+  font-weight: 400; /* Font size for paragraph */
+  margin-bottom: 30px; /* Space below the paragraph */
+  color: rgb(101, 185, 27); /* Slightly lighter text color */
+  line-height: 1.5; /* Improved line height for readability */
+}
+
+.login-button {
+  padding: 12px 10px; /* Padding for button */
+  font-size: 1.2rem; /* Font size for button */
+  color: white; /* Text color */
+  background-color: #007bff; /* Button background color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+  box-shadow: 0 2px 10px rgba(0, 123, 255, 0.5); /* Button shadow */
+}
+
+.login-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Feature Section Styles */
+.feature-section {
+  margin-top: 40px; /* Space above feature section */
+  padding: 40px; /* Padding around the section */
+  width: 80%;
+  background-color: #eddeea; /* White background for the feature section */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(47, 240, 8, 0.1); /* Shadow for depth */
+}
+
+h2 {
+  font-size: 2rem; /* Font size for subheading */
+  margin-bottom: 20px; /* Space below the subheading */
+  color: #2d34c3; /* Dark teal color */
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  list-style-type: none; /* Remove default list style */
+  padding: 0; /* Remove padding */
+}
+
+.feature-list li {
+  font-size: 1.3rem; /* Font size for feature list items */
+  margin: 10px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Space between items */
+  color: #555; /* Slightly lighter text color */
+  text-align: left; /* Align text to the left */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  p {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  .login-button {
+    font-size: 1rem; /* Smaller button font size */
+  }
+
+  .home-container {
+    width: 80%; /* Make it wider on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* Even smaller font size for very small screens */
+  }
+
+  p {
+    font-size: 0.9rem; /* Further reduce paragraph font size */
+  }
+
+  .login-button {
+    font-size: 0.9rem; /* Further reduce button font size */
+  }
+  .home-container {
+    position: absolute;
+    margin-left: -35px;
+   /* Make it wider on smaller screens */
+  }
+}

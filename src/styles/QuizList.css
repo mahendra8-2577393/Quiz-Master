@@ -1,0 +1,75 @@
+/* QuizList.css */
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #0fe850;
+  margin-top: 60px; /* Adjusted to navbar height */
+  height: calc(100vh - 60px); /* Full viewport height minus navbar height */
+}
+
+
+h1 {
+  font-size: 2.5rem; /* Font size for heading */
+  color: #00796b; /* Dark teal color */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+ul {
+  list-style-type: none; /* Remove default list style */
+  padding: 0; /* Remove padding */
+  width: 100%; /* Full width */
+  max-width: 600px; /* Max width for larger screens */
+}
+
+li {
+  margin: 10px 0; /* Space between quiz items */
+}
+
+button {
+  width: 100%; /* Full width button */
+  padding: 15px; /* Inner padding */
+  font-size: 1.2rem; /* Font size */
+  color: white; /* Text color */
+  background-color: #007bff; /* Button background color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+  box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3); /* Button shadow */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Focus shadow */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Smaller heading for tablets */
+  }
+
+  button {
+    font-size: 1rem; /* Smaller button font size */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* Even smaller heading for mobile */
+  }
+
+  button {
+    font-size: 0.9rem; /* Smaller button font size */
+    padding: 12px; /* Reduce button padding */
+  }
+}

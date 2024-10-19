@@ -1,0 +1,131 @@
+/* Auth.css */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height for centering */
+  /* Gradient background */
+  padding: 20px; /* Add some padding */
+}
+
+.auth-form {
+  background-color: white; /* Form background */
+  padding: 30px; /* Inner padding */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  width: 100%; /* Full width for small screens */
+  max-width: 400px; /* Fixed maximum width */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.auth-title {
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Space below title */
+  font-size: 2rem; /* Title font size */
+  color: #333; /* Title color */
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+}
+
+.error-message {
+  color: red; /* Red color for error messages */
+  font-size: 0.9rem; /* Smaller font size */
+  margin-bottom: 15px; /* Space below error message */
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+}
+
+label {
+  display: block; /* Block display for labels */
+  margin-bottom: 5px; /* Space below labels */
+  font-weight: bold; /* Bold labels */
+  color: black;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+}
+
+input {
+  width: 100%; /* Full width */
+  padding: 10px; /* Inner padding */
+  margin-bottom: 20px; /* Space below inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded borders */
+  font-size: 1rem; /* Font size for inputs */
+  transition: border-color 0.3s; /* Smooth border transition */
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+}
+
+input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.auth-btn {
+  width: 100%; /* Full width */
+  padding: 10px; /* Inner padding */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1.2rem; /* Font size for button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background transition */
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+}
+
+.auth-btn:hover {
+  background-color: #0056b3; /* Darker button color on hover */
+}
+
+.redirect-text {
+  text-align: center; /* Center the redirect text */
+  margin-top: 15px; /* Space above the redirect text */
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+}
+
+.redirect-text a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.redirect-text a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 480px) {
+  .auth-form {
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .auth-title {
+    font-size: 1.8rem; /* Smaller title font size */
+  }
+
+  .auth-btn {
+    font-size: 1rem; /* Smaller button font size */
+  }
+
+  label, input {
+    font-size: 0.9rem; /* Smaller font size for labels and inputs */
+  }
+
+  .error-message {
+    font-size: 0.8rem; /* Smaller error message font size */
+  }
+
+  .redirect-text {
+    font-size: 0.9rem; /* Smaller redirect text font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-title {
+    font-size: 1.5rem; /* Smaller title font size for tablets */
+  }
+
+  .auth-btn {
+    font-size: 1.1rem; /* Adjust button font size */
+  }
+}

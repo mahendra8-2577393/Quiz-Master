@@ -1,0 +1,168 @@
+/* Container for the Quiz */
+.quiz-container {
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  position: relative;
+  top: 10%;
+  background-color: rgb(233, 242, 235);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  text-align: center; /* Center content */
+}
+
+/* Progress Bar Styling */
+.progress-bar-container {
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: #6a1b9a;
+  width: 0;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Question Title */
+h1 {
+  font-size: 2.5rem;
+  color: #6a1b9a;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Options Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+/* Button Styling */
+button {
+  width: 80%; /* Reduce width of buttons */
+  padding: 15px;
+  background-color: #8c0bdc;
+  color: rgb(35, 159, 200);
+  border: 2px solid rgb(16, 72, 227);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 auto; /* Center the button */
+  display: block; /* Block display for margin to take effect */
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #4e1475;
+}
+
+/* Radio Buttons visible for answer options */
+button:focus {
+  outline: none;
+}
+
+li button {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: #f4f4f9;
+  color: #333;
+  border: 2px solid #6a1b9a;
+  font-size: 1rem;
+  padding: 10px;
+  margin: 5px auto; /* Center the button */
+  border-radius: 5px;
+  width: 80%; /* Center and reduce button width */
+}
+
+li button:hover:not(:disabled) {
+  background-color: #e0dbf0;
+  color: #6a1b9a;
+}
+
+li button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(106, 27, 154, 0.6);
+}
+
+/* Correct and Incorrect Answers */
+button.correct {
+  background-color: green !important;
+  color: white !important;
+}
+
+button.wrong {
+  background-color: red !important;
+  color: white !important;
+}
+
+/* Final Score */
+.final-score {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+/* Finish Button Styling */
+.finish-btn {
+  background-color: #4caf50;
+  color: white;
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  width: 80%; /* Center and reduce width */
+  margin: 0 auto; /* Center the finish button */
+}
+
+.finish-btn:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .quiz-container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .finish-btn {
+    font-size: 1rem;
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}
