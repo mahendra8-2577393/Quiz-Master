@@ -22,7 +22,7 @@ const AdminPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/add-quiz",
+        "https://quiz-server-oa39.onrender.com/api/v1/add-quiz",
         newQuiz,
         {
           headers: { Authorization: `Bearer ${token}` },

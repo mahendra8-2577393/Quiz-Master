@@ -1,7 +1,7 @@
 // services/apiService.js
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/v1"; // Base URL for the API
+const API_URL = `https://quiz-server-oa39.onrender.com/api/v1`; // Base URL for the API
 
 const apiService = {
   getQuizzes: async () => {

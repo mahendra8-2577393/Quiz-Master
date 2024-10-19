@@ -15,7 +15,7 @@ const Login = ({ onLogin }) => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/v1/login', { email, password });
+      const response = await axios.post('https://quiz-server-oa39.onrender.com/api/v1/login', { email, password });
       const userData = response.data;
 
       if (userData && userData.user) {
