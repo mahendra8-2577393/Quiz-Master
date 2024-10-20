@@ -3,19 +3,25 @@ body {
   padding: 0; /* Optionally reset padding as well */
   box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
 }
-.App {
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-  min-height: 100vh; /* Full height for background color */
+
+
+/* App.css */
+
+/* Light mode styles */
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
 }
 
-.light-mode{
-  background-color: #ffffff; /* Light background */
-  color: #000000; /* Light text color */
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
 
-.dark-mode{
-  background-color: black; /* Dark background */
-  color: #ffffff; /* Dark text color */
+/* Ensure the transition between modes is smooth */
+body, .App {
+  transition: background-color 0.3s, color 0.3s;
 }
 
 

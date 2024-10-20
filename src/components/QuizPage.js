@@ -3,7 +3,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import apiService from "../services/apiService";
 import ProgressBar from "./ProgressBar";
 import "../styles/QuizPage.css";
-import { jwtDecode } from "jwt-decode"; // Install this package if you haven't already
 
 const QuizPage = ({user , setUser}) => {
   const [questions, setQuestions] = useState([]);
@@ -76,7 +75,7 @@ const QuizPage = ({user , setUser}) => {
 
   return (
     <div className="quiz-container">
-      <h1>Quiz</h1>
+      <h1 style={{ color: 'black' }}>Quiz</h1>
       <ProgressBar current={currentQuestion + 1} total={questions.length} />
       {!quizCompleted ? (
         <>
@@ -109,7 +108,7 @@ const QuizPage = ({user , setUser}) => {
         </>
       ) : (
         <>
-          <p>Your final score: {score}</p>
+          <p style={{ color: 'black' }}>Your final score: {score}</p>
           <button onClick={handleFinishQuiz}>Finish Quiz</button>
         </>
       )}

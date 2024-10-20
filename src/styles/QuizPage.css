@@ -97,7 +97,7 @@ li button {
 }
 
 li button:hover:not(:disabled) {
-  background-color: #e0dbf0;
+  background-color: #0ed11b;
   color: #6a1b9a;
 }
 

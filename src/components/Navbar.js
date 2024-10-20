@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa"; // Import FaBars for the hamburger icon
 import "bootstrap/dist/css/bootstrap.min.css";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import Toastify CSS
 
 const Navbar = ({
   toggleTheme,
@@ -11,10 +13,23 @@ const Navbar = ({
   onToggleSidebar,
   isSidebarVisible,
 }) => {
+  // const handleAdminClick = (e) => {
+  //   if (!user) {
+  //     e.preventDefault(); // Prevent navigation
+  //     toast.error("You need to login as an admin to access the admin panel.", {
+  //       position: "top-bottom",
+  //       autoClose: 3000,
+  //     });
+  //   } else {
+  //     // If user is logged in, redirect to the Admin page
+  //     window.location.href = "/admin";
+  //   }
+  
+
   return (
     <nav
       className="navbar navbar-expand-lg fixed-top"
-      style={{ backgroundColor: "#ADFF2F"}}
+      style={{ backgroundColor: "#ADFF2F", height: "60px" }}
     >
       <div className="container-fluid">
         <Link
@@ -43,7 +58,6 @@ const Navbar = ({
                 justifyContent: "center",
                 width: "auto",
                 fontSize: "1.2rem",
-                
               }}
             >
               <li className="nav-item">
@@ -72,6 +86,7 @@ const Navbar = ({
                     isDarkMode ? "text-dark" : "text-dark"
                   }`}
                   to="/admin"
+                
                 >
                   Admin
                 </Link>

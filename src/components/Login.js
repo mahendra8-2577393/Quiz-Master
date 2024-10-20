@@ -20,7 +20,7 @@ const Login = ({ onLogin }) => {
 
       if (userData && userData.user) {
         const { user, accessToken } = userData;
-        onLogin(user);
+        onLogin({user , accessToken});
 
         if (accessToken) {
           localStorage.setItem('token', accessToken);

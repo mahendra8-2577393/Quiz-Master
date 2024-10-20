@@ -5,11 +5,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  background-color: #0fe850;
-  margin-top: 60px; /* Adjusted to navbar height */
-  height: calc(100vh - 60px); /* Full viewport height minus navbar height */
+  background-color: #0fe850 ;
+ 
+  /* Adjusted to navbar height */
+  min-height: calc(100vh - 60px); /* Full viewport height minus navbar height */
 }
+
 
 
 h1 {
