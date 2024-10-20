@@ -1,42 +1,53 @@
 // components/Register.js
-import React, { useState } from 'react';
-import axios from 'axios'; // Import Axios for making API requests
-import '../styles/Auth.css'; // Link to the CSS file
+import React, { useState } from "react";
+import axios from "axios"; // Import Axios for making API requests
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
+import "../styles/Auth.css"; // Link to the CSS file
 
 const Register = () => {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState(''); // State to manage error messages
-  const [success, setSuccess] = useState(''); // State to manage success messages
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(""); // State to manage error messages
+  const [success, setSuccess] = useState(""); // State to manage success messages
+
+  const navigate = useNavigate(); // Initialize the navigate hook
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       // Make a POST request to the backend to register the user
-      const response = await axios.post('https://quiz-server-oa39.onrender.com/api/v1/register', {
-        username,
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://quiz-server-oa39.onrender.com/api/v1/register",
+        {
+          username,
+          email,
+          password,
+        }
+      );
 
       // Handle successful registration
       setSuccess(response.data.message);
-      setError(''); // Clear any previous error messages
+      setError(""); // Clear any previous error messages
 
       // Optionally, clear the input fields
-      setUsername('');
-      setEmail('');
-      setPassword('');
+      setUsername("");
+      setEmail("");
+      setPassword("");
+
+      // Navigate to the home page after successful registration
+      setTimeout(() => {
+        navigate("/"); // Redirect to home page
+      }, 2000); // Optional: Delay navigation for 2 seconds to show success message
     } catch (error) {
       // Handle errors (e.g., user already exists)
       if (error.response) {
-        setError(error.response.data.message || 'Registration failed');
-        setSuccess(''); // Clear any previous success messages
+        setError(error.response.data.message || "Registration failed");
+        setSuccess(""); // Clear any previous success messages
       } else {
-        setError('Server error, please try again later.');
-        setSuccess('');
+        setError("Server error, please try again later.");
+        setSuccess("");
       }
     }
   };
@@ -78,7 +89,9 @@ const Register = () => {
           required
         />
 
-        <button type="submit" className="auth-btn">Register</button>
+        <button type="submit" className="auth-btn">
+          Register
+        </button>
       </form>
     </div>
   );

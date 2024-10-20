@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"; // Import Link for navigation
 import "../styles/Home.css"; // Import CSS for styling
 
-const Home = () => {
+const Home = ({ user }) => {
   return (
     <div className="home-container">
       <h1>Welcome to Our Quiz Platform!</h1>
@@ -11,13 +11,21 @@ const Home = () => {
         quizzes. Whether you're preparing for exams or just want to challenge
         yourself, we have something for everyone!
       </p>
-      <Link to="/login">
-        <button className="login-button" aria-label="Login to access quizzes">
-          {" "}
-          {/* Added aria-label for accessibility */}
-          Login to Access Quizzes
-        </button>
-      </Link>
+      
+      {user ? (
+        <Link to="/quizzes">
+          <button className="login-button" aria-label="Access quizzes now">
+            Now You Can Access Quizzes
+          </button>
+        </Link>
+      ) : (
+        <Link to="/login">
+          <button className="login-button" aria-label="Login to access quizzes">
+            Login to Access Quizzes
+          </button>
+        </Link>
+      )}
+      
       <div className="feature-section">
         <h2>Why Choose Us?</h2>
         <ul className="feature-list">
