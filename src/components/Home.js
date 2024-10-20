@@ -27,7 +27,7 @@ const Home = ({ user }) => {
       )}
       
       <div className="feature-section">
-        <h2>Why Choose Us?</h2>
+      <h2 style={{ color: 'black' }}>Why Choose Us?</h2>
         <ul className="feature-list">
           <li>
             🧠 <strong>Diverse Quizzes</strong>: Explore quizzes across various
